@@ -16,8 +16,8 @@ class ViewController: UIViewController ,MKMapViewDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let latitude : CLLocationDegrees = 28.7041
-        let longitude : CLLocationDegrees = 77.1025
+        let latitude : CLLocationDegrees = 28.5244
+        let longitude : CLLocationDegrees = 77.1855
         
         //Zoom in level of the map
         let latDelta : CLLocationDegrees = 0.05
@@ -31,6 +31,12 @@ class ViewController: UIViewController ,MKMapViewDelegate{
         let region : MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
         
         map.setRegion(region, animated: true)
+        
+        let annotation :MKPointAnnotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = "Qutab Minar"
+        annotation.subtitle = "Visited tons of times. . ."
+        map.addAnnotation(annotation)
         
         
     }

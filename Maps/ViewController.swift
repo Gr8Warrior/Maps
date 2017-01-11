@@ -38,9 +38,24 @@ class ViewController: UIViewController ,MKMapViewDelegate{
         annotation.subtitle = "Visited tons of times. . ."
         map.addAnnotation(annotation)
         
+        let uiLPGR = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.longPress(gestureRecogmizer:)));
+        uiLPGR.minimumPressDuration = 1
+        map.addGestureRecognizer(uiLPGR)
+        
         
     }
-
+    func longPress(gestureRecogmizer : UILongPressGestureRecognizer ) {
+        
+        let touchPoint = gestureRecogmizer.location(in: self.map)
+        let coordinate = map.convert(touchPoint, toCoordinateFrom: map)
+        let userAnnotation : MKPointAnnotation = MKPointAnnotation()
+        userAnnotation.coordinate = coordinate
+        userAnnotation.title = "New Place "
+        userAnnotation.subtitle = "\(coordinate.latitude), \(coordinate.longitude)"
+        map.addAnnotation(userAnnotation)
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

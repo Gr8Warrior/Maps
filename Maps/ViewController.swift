@@ -73,6 +73,22 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         print(locations)
+        
+        let userLocation : CLLocation = locations[0]
+        
+        let latitude = userLocation.coordinate.latitude
+        let longitude = userLocation.coordinate.longitude
+        
+        
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let userAnnotation : MKPointAnnotation = MKPointAnnotation()
+        userAnnotation.coordinate = coordinate
+        userAnnotation.title = "New Place "
+        userAnnotation.subtitle = "\(coordinate.latitude), \(coordinate.longitude)"
+        map.addAnnotation(userAnnotation)
+        
+        map.userTrackingMode = MKUserTrackingMode.follow
+
     }
     
 }

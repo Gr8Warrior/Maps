@@ -8,13 +8,21 @@
 
 import UIKit
 import MapKit
-class ViewController: UIViewController ,MKMapViewDelegate{
+import  CoreLocation
+class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDelegate{
 
     @IBOutlet var map: MKMapView!
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
         
         let latitude : CLLocationDegrees = 28.5244
         let longitude : CLLocationDegrees = 77.1855
@@ -62,5 +70,10 @@ class ViewController: UIViewController ,MKMapViewDelegate{
     }
 
 
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        print(locations)
+    }
+    
 }
 

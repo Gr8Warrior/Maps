@@ -25,16 +25,17 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
         
         let latitude : CLLocationDegrees = 28.5244
         let longitude : CLLocationDegrees = 77.1855
-        
-        //Zoom in level of the map
-        let latDelta : CLLocationDegrees = 0.05
-        let lonDelta : CLLocationDegrees = 0.05
-        
-        //span combination of lat delta and lon delta
+      
+      //Zoom in level of the map
+        let latDelta : CLLocationDegrees = 0.5
+        let lonDelta : CLLocationDegrees = 0.5
+      
+      //span combination of lat delta and lon delta
         let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
         
         let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        //region = combinaton of location and span
+      
+      //region = combinaton of location and span
         let region : MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
         
         map.setRegion(region, animated: true)
@@ -63,11 +64,6 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
         
         
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         

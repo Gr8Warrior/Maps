@@ -24,7 +24,7 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
         
         
         let latitude : CLLocationDegrees = 28.5244
-        let longitude : CLLocationDegrees = 77.1855
+        let longitude : CLLocationDegrees = 77.1856
       
       //Zoom in level of the map
         let latDelta : CLLocationDegrees = 0.5

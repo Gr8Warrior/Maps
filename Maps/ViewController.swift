@@ -41,7 +41,7 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
         
         let annotation :MKPointAnnotation = MKPointAnnotation()
         annotation.coordinate = location
-        annotation.title = "Qutab Minar"
+        annotation.title = "Qutab Minar(New Delhi)"
         annotation.subtitle = "Just to remind, Visited tons of times. . ."
         map.addAnnotation(annotation)
         

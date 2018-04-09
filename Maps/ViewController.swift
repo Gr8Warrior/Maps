@@ -23,7 +23,7 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
         locationManager.startUpdatingLocation()
         
         
-        let latitude : CLLocationDegrees = 28.5244
+        let latitude : CLLocationDegrees = 28.5245
         let longitude : CLLocationDegrees = 77.1856
       
       //Zoom in level of the map

@@ -82,7 +82,7 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let userAnnotation : MKPointAnnotation = MKPointAnnotation()
         userAnnotation.coordinate = coordinate
-        userAnnotation.title = "New Native Place "
+        userAnnotation.title = "My Place "
         userAnnotation.subtitle = "\(coordinate.latitude), \(coordinate.longitude)"
         map.addAnnotation(userAnnotation)
         

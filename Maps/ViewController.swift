@@ -16,7 +16,6 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest

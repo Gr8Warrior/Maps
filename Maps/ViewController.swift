@@ -27,8 +27,8 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
         let longitude : CLLocationDegrees = 77.1855
         
         //Zoom in level of the map
-        let latDelta : CLLocationDegrees = 0.05
-        let lonDelta : CLLocationDegrees = 0.05
+        let latDelta : CLLocationDegrees = 0.5
+        let lonDelta : CLLocationDegrees = 0.5
         
         //span combination of lat delta and lon delta
         let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)

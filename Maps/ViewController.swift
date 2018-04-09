@@ -42,7 +42,7 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
         let annotation :MKPointAnnotation = MKPointAnnotation()
         annotation.coordinate = location
         annotation.title = "Qutab Minar"
-        annotation.subtitle = "Visited tons of times. . ."
+        annotation.subtitle = "Just to remind, Visited tons of times. . ."
         map.addAnnotation(annotation)
         
         let uiLPGR = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.longPress(gestureRecogmizer:)));

@@ -58,7 +58,7 @@ class ViewController: UIViewController ,MKMapViewDelegate, CLLocationManagerDele
         let coordinate = map.convert(touchPoint, toCoordinateFrom: map)
         let userAnnotation : MKPointAnnotation = MKPointAnnotation()
         userAnnotation.coordinate = coordinate
-        userAnnotation.title = "Added Place "
+        userAnnotation.title = "Newly Added Place "
         userAnnotation.subtitle = "\(coordinate.latitude), \(coordinate.longitude)"
         map.addAnnotation(userAnnotation)
         
